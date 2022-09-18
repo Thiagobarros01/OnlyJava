@@ -41,7 +41,15 @@ public class Conta {
 		this.saldo -= saldo + 5;
 	}
 	
-	
+	public String toString() {
+		return " Conta "
+				+ numConta
+				+ ", Titular: "
+				+ titular
+				+ ",saldo: $"
+				+ String.format("%.2f", saldo);
+				
+	}
 	
 	
 	

@@ -12,13 +12,31 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		Conta conta ;
 		
-		System.out.print("Adicione o número do conta: ");
+		System.out.print("Adicione o número da conta: ");
 		int number = sc.nextInt(); 
-		System.out.println("Adicione o nome do titular: ");
+		System.out.print("Adicione o nome do titular: ");
 		sc.nextLine();
-		String tiular = sc.nextLine();
-		System.out.print("Deseja fazer um depósito inicial?");
+		String titular = sc.nextLine();
+		System.out.print("Deseja fazer um depósito inicial? (y/n)");
+		char response = sc.next().charAt(0);
+		if (response == 'y') {
+			System.out.print("Qual o valor de depósito?");
+			double depositoInicial = sc.nextDouble();
+			conta = new Conta(number, titular, depositoInicial);
+		} else {
+			conta = new Conta(number, titular);
+			System.out.print("Qual o valor de depósito?");
+			conta.depositar(sc.nextDouble());
+			
+		}
 		
+		System.out.println("Valor para saque? ");
+		conta.sacar(sc.nextDouble());
+		
+		System.out.println();
+		System.out.println("Dados da conta:");
+		System.out.println(conta);
+
 		
 		
 		sc.close();
