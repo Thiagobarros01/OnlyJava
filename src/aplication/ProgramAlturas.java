@@ -42,7 +42,7 @@ public class ProgramAlturas {
 
 		}
 		double porcentagem = cont * 100 / n;
-		System.out.printf("Pessoas com menos de 16 anos, equivalente a : %.1f%%%n ", porcentagem);
+		System.out.printf("Pessoas com menos de 18 anos, equivalente a : %.1f%%%n ", porcentagem);
 		
 		System.out.println("Lista dos menores de idade: ------- ");
 		for (int i = 0; i < n; i++) {
