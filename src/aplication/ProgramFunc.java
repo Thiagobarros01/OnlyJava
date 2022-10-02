@@ -46,7 +46,7 @@ public class ProgramFunc {
 
 		System.out.println();
 		for (Funcionarios func : list) {
-			System.out.println(func.ToString());
+			System.out.println(func.toString());
 		}
 
 		sc.close();
