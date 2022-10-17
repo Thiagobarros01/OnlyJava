@@ -1,19 +1,18 @@
 package aplication;
 
-import java.text.Format;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
 
 public class DataHora {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		DateTimeFormatter dt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		DateTimeFormatter dt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());
 		DateTimeFormatter dt3 = DateTimeFormatter.ISO_INSTANT;
@@ -61,7 +60,7 @@ public class DataHora {
 		
 		System.out.println();
 		System.out.println();
-		
+		LocalDate d007 = LocalDate.parse("03/10/2022",dt);
 		
 		DateTimeFormatter datas = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		DateTimeFormatter datasT = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());
@@ -70,10 +69,13 @@ public class DataHora {
 		LocalDateTime d2 = LocalDateTime.parse("2022-10-07T13:01:00") ;
 		System.out.println(d1.format(datas));
 		System.out.println(d2.format(datasT));
+		System.out.println(dt);
+		System.out.println(d1.format(dt));
 		
+		System.out.println("Data: ");
+		LocalDate dataa = LocalDate.parse(sc.next(), dt);
 		
-		
-		
+		sc.close();
 	}
 
 }
