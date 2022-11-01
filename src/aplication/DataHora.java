@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class DataHora {
@@ -71,11 +72,20 @@ public class DataHora {
 		System.out.println(d2.format(datasT));
 		System.out.println(dt);
 		System.out.println(d1.format(dt));
-		
+		LocalDate d001 = LocalDate.parse("2022-10-03");
+		System.out.println(d001.getMonthValue());
 		System.out.println("Data: ");
-		LocalDate dataa = LocalDate.parse(sc.next(), dt);
+		//LocalDate dataa = LocalDate.parse(sc.next(), dt);
+		Calendar cal = Calendar.getInstance();
+		System.out.println(cal.toString());
+		System.out.println();
+		System.out.println(d01);
+		LocalDate r14 = LocalDate.ofInstant(d11, ZoneId.systemDefault());
+		LocalDate s = LocalDate.now();
+		System.out.println(s.getYear());
+		System.out.println(s.getMonthValue());
 		
-		sc.close();
+		
 	}
 
 }

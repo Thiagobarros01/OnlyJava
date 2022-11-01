@@ -1,10 +1,9 @@
 package utilidades;
 
-import java.time.temporal.ValueRange;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class HourContract {
-	private Date date;
+	private LocalDate date;
 	private Double valuesPerHour;
 	private Integer hours;
 
@@ -12,17 +11,17 @@ public class HourContract {
 
 	}
 
-	public HourContract(Date date, Double valuesPerHour, Integer hours) {
+	public HourContract(LocalDate date, Double valuesPerHour, Integer hours) {
 		this.date = date;
 		this.valuesPerHour = valuesPerHour;
 		this.hours = hours;
 	}
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 
